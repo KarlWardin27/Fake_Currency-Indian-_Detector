@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+        <title>Currency Detector - Home</title>
+</head>
+<style> 
+    .nav-item {
+        font-size: 14px;
+        font-family: 'Inter', sans-serif;
+    }
+    .navbar-custom {
+    background-color: #438BEB;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: #363636;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+.container-timeline {
+  position: relative;
+}
+
+
+.container-timeline ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  display: inline-block;
+  counter-reset: wa-process-counter;
+}
+
+.container-timeline ul li {
+  list-style: none;
+  margin: 0;
+  border-left: 1px solid #438BEB;
+  padding: 0 0 30px 40px;
+  position: relative;
+  counter-increment: wa-process-counter;
+}
+
+.container-timeline ul li:last-child {
+  border: 0;
+}
+
+.container-timeline ul li::before {
+  position: absolute;
+  left: -21px;
+  top: 0;
+  content: counter(wa-process-counter);
+  border: 1px solid #438BEB;
+  border-radius: 5px;
+  background: #438BEB;
+  height: 41px;
+  width: 41px;
+  text-align: center;
+  line-height: 41px;
+      color: white;
+}
+
+@media (min-width: 1200px) {
+  .container-timeline ul {
+    display: flex;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  .container-timeline ul li {
+    flex: 1 1 0;
+    border-left: 0;
+
+    border-top: 1px solid #438BEB;
+    padding: 50px 2em 0 0;
+  }
+
+  .container-timeline ul li::before {
+    left: 0;
+    top: -21px;
+  }
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+  </html>
+  <html>
+    <body style = "background-color: #FAFAFA;"> 
+      <nav class="navbar navbar-expand-lg navbar-custom  static-top">
+        <div class="container">
+          <a class="navbar-brand" style = "padding-left : 15px" >
+            <img src="Assets/Logo.svg">
+              </a>
+          <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item " style = "padding-left: 20px ;" style = "padding-right: 20px ;" >
+                <a class="nav-link" href="index.html">Home
+  
+                    </a>
+              </li>
+              <li class="nav-item" style = "padding-left: 20px ;" style = "padding-right: 20px ;" >
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item active" style = "padding-left: 20px ;" style = "padding-right: 20px ;"  >
+                <a class="nav-link" href="timeline.html">Timeline
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item" style = "padding-left: 20px ;" style = "padding-right: 20px ;"  >
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+      <main>
+
+        <section class="py-5">
+    <div class="container"> 
+      <div class="center">
+      <center>  <p class="h2 mb-5">Timeline (2020-21)</p>     </center> 
+     
+            <div class="container-timeline">
+              <ul>
+                <li>
+                  <p class="h6 fw-bold">August 2020</p>
+                  <p class="small">Selection of the topic -
+                    Indian Fake Currency Detector
+                  </p>
+                </li>
+                <li>
+                  <p class="h6 fw-bold">September 2020</p>
+                  <p class="small">Procurement of Software - Python</p>
+                </li>
+                <li>
+                  <p class="h6 fw-bold">October 2020</p>
+                  <p class="small">Implementation - Created a database of Currency Notes</p>
+                </li>
+                <li>
+                  <p class="h6 fw-bold">November 2020</p>
+                  <p class="small">Project Report - End of Sem VII</p>
+                </li>
+                <li>
+                  <p class="h6 fw-bold">December 2020</p>
+                  <p class="small">Python Implementation - Simple App Using jupyter notebook</p>
+                </li>
+                <li>
+                  <p class="h6 fw-bold">January 2021</p>
+                  <p class="small">Updated Database - Added New Currency Notes</p>
+                </li>
+                <li>
+                  <p class="h6 fw-bold">February 2021</p>
+                  <p class="small">Accuracy of Comparison - Improved comparison precision</p>
+                </li>
+                <li>
+                  <p class="h6 fw-bold">March <br> 2021</p>
+                  <p class="small">Anvil Platform - Used Anvil to create a simple Web App</p>
+                </li>
+                <li>
+                  <p class="h6 fw-bold">April <br> 2021</p>
+                  <p class="small">Full-stack Web App</p>
+                </li>
+              </ul>
+            </div>
+            </div>
+          </div>
+      
+        </section>
+        
+        
+      </main>
+    </body>
+    <body>
+        <footer>
+            Happy Checking
+             <strong>ツ</strong>
+        </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+    </html>
