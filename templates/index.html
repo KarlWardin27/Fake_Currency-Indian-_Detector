@@ -4,378 +4,72 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-        <title>Currency Detector - Home</title>
+    
+        <title>Bone Age Predictor (Under 18)</title>
 </head>
-<style> 
- .container_drag{ 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #5256ad;
-}
-    .nav-item {
-        font-size: 14px;
-        font-family: 'Inter', sans-serif;
-    }
-    .navbar-custom {
-    background-color: #438BEB;
-}
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: rgba(255,255,255,.8);
-}
-/* change the link color */
-.navbar-custom .navbar-nav .nav-link {
-    color: rgba(255,255,255,.5);
-}
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #ffffff;
-}
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  color: #818181;
-  margin-bottom: 20px;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-}
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 26px;
-  line-height: 1;
-  color: #438BEB;
-  margin-bottom: 0;
-}
+<body>
 
-p {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  color: #5f6982;
-}
+    <!-- Optional JavaScript; choose one of the two! -->
 
-.uploader {
-  display: block;
-  clear: both;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 600px;
-}
-.uploader label {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  background: #fff;
-  border-radius: 7px;
-  border: 3px solid #eee;
-  transition: all 0.2s ease;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.uploader label:hover {
-  border-color: #438BEB;
-}
-.uploader label.hover {
-  border: 3px solid #438BEB;
-  box-shadow: inset 0 0 0 6px #eee;
-}
-.uploader label.hover #start i.fa {
-  transform: scale(0.8);
-  opacity: 0.3;
-}
-.uploader #start {
-  float: left;
-  clear: both;
-  width: 100%;
-}
-.uploader #start.hidden {
-  display: none;
-}
-.uploader #start i.fa {
-  font-size: 50px;
-  margin-bottom: 1rem;
-  transition: all 0.2s ease-in-out;
-}
-.uploader #response {
-  float: left;
-  clear: both;
-  width: 100%;
-}
-.uploader #response.hidden {
-  display: none;
-}
-.uploader #response #messages {
-  margin-bottom: 0.5rem;
-}
-.uploader #file-image {
-  display: inline;
-  margin: 0 auto 0.5rem auto;
-  width: auto;
-  height: auto;
-  max-width: 180px;
-}
-.uploader #file-image.hidden {
-  display: none;
-}
-.uploader #notimage {
-  display: block;
-  float: left;
-  clear: both;
-  width: 100%;
-}
-.uploader #notimage.hidden {
-  display: none;
-}
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-.uploader input[type=file] {
-  display: none;
-}
-.uploader div {
-  margin: 0 0 0.5rem 0;
-  color: #5f6982;
-}
-.uploader .btn {
-  display: inline-block;
-  margin: 0.5rem 0.5rem 1rem 0.5rem;
-  clear: both;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  text-transform: initial;
-  border: none;
-  border-radius: 0.2rem;
-  outline: none;
-  padding: 0 1rem;
-  height: 36px;
-  line-height: 36px;
-  color: #fff;
-  transition: all 0.2s ease-in-out;
-  box-sizing: border-box;
-  background: #438BEB;
-  border-color: #438BEB;
-  cursor: pointer;
-}
-</style>
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
   </html>
   <html>
     <body style = "background-color: #FAFAFA;"> 
-      <nav class="navbar navbar-expand-lg navbar-custom  static-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
+            <a1 style = "padding-left: 0px ;"><strong>Bone Age Prediction</strong></a1>
           <a class="navbar-brand" style = "padding-left : 15px" >
-            <img src="Static/Logo.svg">
+                <img src="/static/logo3.png" width="45px" height="40px" alt="" >
               </a>
-          <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active" style = "padding-left: 20px ;" style = "padding-right: 20px ;" >
-                <a class="nav-link" href="#">Home
+                <a class="nav-link" href="/">Home
                       <span class="sr-only">(current)</span>
                     </a>
               </li>
               <li class="nav-item" style = "padding-left: 20px ;" style = "padding-right: 20px ;" >
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
               </li>
               <li class="nav-item" style = "padding-left: 20px ;" style = "padding-right: 20px ;"  >
-                <a class="nav-link" href="timeline.html">Timeline</a>
-              </li>
-              <li class="nav-item" style = "padding-left: 20px ;" style = "padding-right: 20px ;"  >
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </nav> 
-     <Center>   
-      <h2 style="padding-top: 200px;">Upload your currency note</h2>
-      <p class="lead" style="padding-top: 6px;">Then Click on <b>Submit</b></p>
-    </Center>
-      <!-- Upload  -->
-      <form id="file-upload-form" class="uploader">
-        <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
-      
-        <label for="file-upload" id="file-drag">
-          <img id="file-image" src="#" alt="Preview" class="hidden">
-          <div id="start">
-            <i class="fa fa-download" aria-hidden="true"></i>
-            <div>Select a file or drag here</div>
-            <div id="notimage" class="hidden">Please select an image</div>
-            <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
-          </div>
-          <div id="response" class="hidden">
-            <div id="messages"></div>
-           
-          </div>
-        </label>
-      </form>
+      <style> 
+          a1 {
+            font-size: 25px;
+            color: #66b933 ;
+          }     
+      </style>
+            <div class="d-flex justify-content-center">
+                <center><form method ="POST" action="{{url_for('index')}}" enctype="multipart/form-data" style = "padding-top : 230px">
+                     <div class="form-group">
+                            <label for ="image"><strong>Add Your Hand X-Ray</strong></label><br>
+                            <input type="file" name='image' class='btn btn-secondary'><br>
+                            <small id="image" class="form-text text-muted">Works only with left hand X-Rays</small><br><br>
+                            <input type="submit" class='btn btn-success' value="Predict Bone Age">
+                     <!--<button type="submit" value ="Login" name = "Login" class="btn btn-success" formaction="process.php">Submit</button>-->
+                    <!-- <button type="submit" value ="Register" name = "Register" class="btn btn-secondary" formaction="register.html">Register</button> -->
+                   </form></center>
+              </div>
 
-        <footer>
-            Happy Checking
-             <strong>ツ</strong>
-        </footer>
-      <script>
-        function ekUpload(){
-  function Init() {
-
-    console.log("Upload Initialised");
-
-    var fileSelect    = document.getElementById('file-upload'),
-        fileDrag      = document.getElementById('file-drag'),
-        submitButton  = document.getElementById('submit-button');
-
-    fileSelect.addEventListener('change', fileSelectHandler, false);
-
-    // Is XHR2 available?
-    var xhr = new XMLHttpRequest();
-    if (xhr.upload) {
-      // File Drop
-      fileDrag.addEventListener('dragover', fileDragHover, false);
-      fileDrag.addEventListener('dragleave', fileDragHover, false);
-      fileDrag.addEventListener('drop', fileSelectHandler, false);
-    }
-  }
-
-  function fileDragHover(e) {
-    var fileDrag = document.getElementById('file-drag');
-
-    e.stopPropagation();
-    e.preventDefault();
-
-    fileDrag.className = (e.type === 'dragover' ? 'hover' : 'modal-body file-upload');
-  }
-
-  function fileSelectHandler(e) {
-    // Fetch FileList object
-    var files = e.target.files || e.dataTransfer.files;
-
-    // Cancel event and hover styling
-    fileDragHover(e);
-
-    // Process all File objects
-    for (var i = 0, f; f = files[i]; i++) {
-      parseFile(f);
-      uploadFile(f);
-    }
-  }
-
-  // Output
-  function output(msg) {
-    // Response
-    var m = document.getElementById('messages');
-    m.innerHTML = msg;
-  }
-
-  function parseFile(file) {
-
-    console.log(file.name);
-    output(
-      '<strong>' + encodeURI(file.name) + '</strong>'
-    );
-    
-    // var fileType = file.type;
-    // console.log(fileType);
-    var imageName = file.name;
-
-    var isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(imageName);
-    if (isGood) {
-      document.getElementById('start').classList.add("hidden");
-      document.getElementById('response').classList.remove("hidden");
-      document.getElementById('notimage').classList.add("hidden");
-      // Thumbnail Preview
-      document.getElementById('file-image').classList.remove("hidden");
-      document.getElementById('file-image').src = URL.createObjectURL(file);
-    }
-    else {
-      document.getElementById('file-image').classList.add("hidden");
-      document.getElementById('notimage').classList.remove("hidden");
-      document.getElementById('start').classList.remove("hidden");
-      document.getElementById('response').classList.add("hidden");
-      document.getElementById("file-upload-form").reset();
-    }
-  }
-
-  function setProgressMaxValue(e) {
-    var pBar = document.getElementById('file-progress');
-
-    if (e.lengthComputable) {
-      pBar.max = e.total;
-    }
-  }
-
-  function updateFileProgress(e) {
-    var pBar = document.getElementById('file-progress');
-
-    if (e.lengthComputable) {
-      pBar.value = e.loaded;
-    }
-  }
-
-  function uploadFile(file) {
-
-    var xhr = new XMLHttpRequest(),
-      fileInput = document.getElementById('class-roster-file'),
-      pBar = document.getElementById('file-progress'),
-      fileSizeLimit = 1024; // In MB
-    if (xhr.upload) {
-      // Check if file is less than x MB
-      if (file.size <= fileSizeLimit * 1024 * 1024) {
-        // Progress bar
-        pBar.style.display = 'inline';
-        xhr.upload.addEventListener('loadstart', setProgressMaxValue, false);
-        xhr.upload.addEventListener('progress', updateFileProgress, false);
-
-        // File received / failed
-        xhr.onreadystatechange = function(e) {
-          if (xhr.readyState == 4) {
-            // Everything is good!
-
-            // progress.className = (xhr.status == 200 ? "success" : "failure");
-            // document.location.reload(true);
-          }
-        };
-
-        // Start upload
-        xhr.open('POST', document.getElementById('file-upload-form').action, true);
-        xhr.setRequestHeader('X-File-Name', file.name);
-        xhr.setRequestHeader('X-File-Size', file.size);
-        xhr.setRequestHeader('Content-Type', 'multipart/form-data');
-        xhr.send(file);
-      } else {
-        output('Please upload a smaller file (< ' + fileSizeLimit + ' MB).');
-      }
-    }
-  }
-
-  // Check for the various File API support.
-  if (window.File && window.FileList && window.FileReader) {
-    Init();
-  } else {
-    document.getElementById('file-drag').style.display = 'none';
-  }
-}
-ekUpload();
-      </script> 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-</body>
-    </html>
+    </body>
+</html>
