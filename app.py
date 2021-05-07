@@ -209,7 +209,7 @@ def index():
     feature_list = ['L_BRAILLE', 'R_BRAILLE', 'RBI_HI','RBI_EN', 'VALUE_STD', 'VALUE_HI', 'VALUE_HID', 'SEC_STRIP','EMBLEM']
     feature_list_old = ['VALUE_CENTER', 'VALUE_RIGHT', 'VALUE_LEFT','RBI_EN_HI', 'EMBLEM','SEAL']
     #-----------DATA SET ENDS-------------
-
+    final = "Please click a Clear Image."
     root ="static/Output/"
     #root ="Image/training/20/"
     fileList = getFiles(root)
@@ -315,7 +315,7 @@ def index():
                 try:
                     matches , kp = imageMatcher(reference_image, sample)
                     if matches == None or kp == None:
-                        #print('Feature ' + feature_list[feature_x] + ' not detected.')
+                        final = 'Feature ' + feature_list[feature_x] + ' not detected.'
                         acMeasure[iter] = 65
                         continue
                     accuracy = determineAccuracy(matches)
@@ -330,7 +330,7 @@ def index():
                     #cv2.imshow(title, resultant_image)
                     #print('Feature ' + feature_list[feature_x] + ' matches with distance value  : ' + str(accuracy))
                 except:
-                    #print('Error in feature ' + feature_list[feature_x] + ' of note ' + str(i))
+                    final = 'Error in feature ' + feature_list[feature_x] + ' of note ' + str(i)
                     continue
             megasum += calculateConfidence(acMeasure)[0]
             final = str(calculateConfidence(acMeasure)[1])
@@ -348,7 +348,7 @@ def index():
                         reference_image = cv2.cvtColor(reference_image, cv2.COLOR_BGR2RGB)
                         matches , kp = imageMatcher(reference_image, sample)
                         if matches == None or kp == None:
-                            # print('Feature ' + feature_list_old[d_feat] + ' failed.')
+                            final = 'Feature ' + feature_list_old[d_feat] + ' failed.'
                             continue
                         accuracy = determineAccuracy(matches)
                         if mini > accuracy:
@@ -388,7 +388,7 @@ def index():
                     try:
                         matches , kp = imageMatcher(reference_image, sample)
                         if matches == None or kp == None:
-                            #print('Feature ' + feature_list_old[feature_x] + ' not detected.')
+                            final = 'Feature ' + feature_list_old[feature_x] + ' not detected.'
                             continue
                         accuracy = determineAccuracy(matches)
                         acMeasure[iter] = accuracy
@@ -402,7 +402,7 @@ def index():
                         #cv2.imshow(title, resultant_image)
                         #print('Feature ' + feature_list_old[feature_x] + ' matches with distance value  : ' + str(accuracy))
                     except:
-                        #print('Error in feature ' + feature_list_old[feature_x] + ' of note ' + str(i))
+                        final = 'Error in feature ' + feature_list_old[feature_x] + ' of note ' + str(i)
                         continue
                 megasum += calculateConfidence_old(acMeasure)[0]      
                 final = str(calculateConfidence_old(acMeasure)[1])
