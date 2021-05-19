@@ -30,6 +30,7 @@ def index():
         str1 = "The note is Fake"
     final.append(str1)
     final.append(img_dir)
+    final.append(round(op*100, 2))
     return render_template('prediction.html', data = final)   
 
 @app.route('/about/')
