@@ -32,33 +32,66 @@
   </html>
   <html>
     <body style = "background-color: #FAFAFA;"> 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <nav class="navbar navbar-expand-lg navbar-custom  static-top">
         <div class="container">
-            <a1 style = "padding-left: 0px ;"><strong>Bone Age Prediction</strong></a1>
           <a class="navbar-brand" style = "padding-left : 15px" >
-                <img src="/static/logo3.png" width="45px" height="40px" alt="" >
+            <img src="/static/Logo.svg">
               </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active" style = "padding-left: 20px ;" style = "padding-right: 20px ;" >
-                <a class="nav-link" href="/">Home
-                      <span class="sr-only">(current)</span>
+              <li class="nav-item " style = "padding-left: 20px ;" style = "padding-right: 20px ;" >
+                <a class="nav-link" href="{{ url_for('main') }}">Home
+  
                     </a>
               </li>
-              <li class="nav-item" style = "padding-left: 20px ;" style = "padding-right: 20px ;" >
-                <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+              <li class="nav-item active" style = "padding-left: 20px ;" style = "padding-right: 20px ;" >
+                <a class="nav-link" href="">About</a>
+                  <span class="sr-only">(current)</span>
               </li>
-              <li class="nav-item" style = "padding-left: 20px ;" style = "padding-right: 20px ;"  >
-                <a class="nav-link" href="#">Contact</a>
+              <li class="nav-item " style = "padding-left: 20px ;" style = "padding-right: 20px ;"  >
+                <a class="nav-link" href="{{ url_for('timeline') }}">Timeline
+                
+                </a>
               </li>
+            <!--    <li class="nav-item" style = "padding-left: 20px ;" style = "padding-right: 20px ;"  >
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li> -->
             </ul>
           </div>
         </div>
       </nav> 
       <style>  
+         .container_drag{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5256ad;
+}
+    .nav-item {
+        font-size: 14px;
+        font-family: 'Inter', sans-serif;
+    }
+    .navbar-custom {
+    background-color: #438BEB;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
           p {
             font-size: 19px;
           }
@@ -69,21 +102,22 @@
         </style>
             <div class="d-flex justify-content-center">
                 <center><form method ="POST"  enctype="multipart/form-data" style = "padding-top : 200px">
+                   <img src="/static/about.svg" height="600">
                      <div class="form-group">
-                            <label for ="image"><p>In today’s era, the radiologist and doctors need good amount
-                              of time and expertise to predict the bone age of<br> a person
-                              through hand scan X-ray. The automated bone age assessment
-                              system will not only<br> save time but it can be used by any
-                              person without having any expertise to predict bone age.
-                              The key idea is to predict a person’s<br> bone age automatically
-                              (below 19 years) by using the hand scan X-ray. This can be
-                              achieved by training deep learning<br> neural network to predict
-                              the person’s age and its accuracy can be improved using CNN
-                              (Convolutional Neural Networks).<br>
-                              <p>This works only with a left hand X-Ray and is able to predict the bone age for Upto 19 years.<br>
-                                Also we'll be adding a new module in the web app where gender information will be utilized to improve Predicion.<br>
-                                You'll always have the option to predict bone age without the gender information. </label><br>
-                             <p> We are and will always be <Strong>OpenSource</Strong> <strong><p style = "color:#66b933;">-Team 27.</p></strong>
+
+                            <label for ="image"><p>Counterfeit money is imitation currency produced without the legal sanction of the state or government. <br>Producing or using this fake money is a form of fraud or forgery.  Counterfeiting is as old 
+as money itself, and is sufficiently <br>prevalent throughout history that it has been called ‘the world's  
+second oldest profession’. This has led to the increase of corruptionin our country <br> hindering country’s growth. There are 
+machines present at banks and other commercial areas to check the authenticity of the currencies.  But 
+a common man does <br>not have access to such systems and hence a need for a software to detect fake 
+currency arises, which can be used by common people.<br> Fake money recognition is very crucial and 
+important aspect for today’s life.
+In India, people are trying to have<br>  cashless transactions using various systems like Credit Card, Debit 
+Card, Net Banking, Mobile Banking, UPI Applications, etc. <br> But still, there are many places where 
+people are not able to use these facilities.  They have to use cash in such cases; and where cash comes <br>
+into the picture, fake money also comes hand-in-hand. That’s why, detecting <br>such fake counterfeit 
+money is very important.</label><br>
+                             <p> Made By <Strong>Viraj Aher, Aniket Ambre and Udit Keksar</Strong> 
                      <!--<button type="submit" value ="Login" name = "Login" class="btn btn-success" formaction="process.php">Submit</button>-->
                     <!-- <button type="submit" value ="Register" name = "Register" class="btn btn-secondary" formaction="register.html">Register</button> -->
                    </form></center>
