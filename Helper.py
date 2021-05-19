@@ -412,7 +412,7 @@ def dFinal(option):
                         lead = 0
                         j=0
                         sample = getFeatureImage(proper_image, feature_set[d_feat])
-                        reference_image = cv2.imread('D:/Code_Me/Python/Fake_Currency_Detector/Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
+                        reference_image = cv2.imread('Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
                         VUAP=verifynewnotes(sample,reference_image,Note_Type,proper_image)
                         #print(VUAP)
                 
@@ -422,7 +422,7 @@ def dFinal(option):
                         lead = 0
                         j=0
                         sample = getFeatureImage(proper_image, feature_set[d_feat])
-                        reference_image = cv2.imread('D:/Code_Me/Python/Fake_Currency_Detector/Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
+                        reference_image = cv2.imread('Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
                         VUAP=verifynewnotes(sample,reference_image,Note_Type,proper_image)
                         #print(VUAP)
 
@@ -435,7 +435,7 @@ def dFinal(option):
                         lead = 0
 
                         sample = getFeatureImage(proper_image, feature_set_old[d_feat])
-                        reference_image = cv2.imread('D:/Code_Me/Python/Fake_Currency_Detector/Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
+                        reference_image = cv2.imread('Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
                         VUAP=verifyoldnotes(sample,reference_image,Note_Type,proper_image)
                         #print(VUAP)
 
@@ -444,7 +444,7 @@ def dFinal(option):
                         mini = 100
                         lead = 0
                         sample = getFeatureImage(proper_image, feature_set_old[d_feat])
-                        reference_image = cv2.imread('D:/Code_Me/Python/Fake_Currency_Detector/Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
+                        reference_image = cv2.imread('Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
                         VUAP=verifyoldnotes(sample,reference_image,Note_Type,proper_image)
                         #print(VUAP)
 
@@ -453,7 +453,7 @@ def dFinal(option):
                         mini = 100
                         lead = 0
                         sample = getFeatureImage(proper_image, feature_set_old[d_feat])
-                        reference_image = cv2.imread('D:/Code_Me/Python/Fake_Currency_Detector/Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
+                        reference_image = cv2.imread('Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
                         VUAP=verifyoldnotes(sample,reference_image,Note_Type,proper_image)
                         #print(VUAP)
             
@@ -462,7 +462,7 @@ def dFinal(option):
                         mini = 100
                         lead = 0
                         sample = getFeatureImage(proper_image, feature_set_old[d_feat])
-                        reference_image = cv2.imread('D:/Code_Me/Python/Fake_Currency_Detector/Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
+                        reference_image = cv2.imread('Image/' + str(Note_Type)+'/000' + str(d_feat+1) + '.jpg', 0)
                         VUAP=verifyoldnotes(sample,reference_image,Note_Type,proper_image)
                         #print(VUAP)
         print(VUAP)
